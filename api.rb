@@ -17,6 +17,10 @@ get "allow_access" do
   '{"access": "granted"}'
 end
 
+get "/" do
+  return "ok"
+end
+
 post "/contact" do
   begin
   response['Access-Control-Allow-Origin'] = '*'
