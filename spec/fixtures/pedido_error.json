@@ -1,0 +1,26 @@
+{
+	"username" : "salesforce@rodcocr.com.test",
+	"password":"monomono1uapMEv4IiUTlbO8RAwV5khBwP",
+	"items": [ { 
+		"id":"1",
+		"Cliente__c" :"Fa00K0000000igJO",
+		"Cantidad__c" : 222,
+		"Precio__c" : 5450,
+		"Descuento__c" : 4,
+		"Impuesto__c" : 0,
+		"Subtotal__c" : 239800,
+		"Referencia__c" : 12453,
+		"Observacion__c" :"" 
+	} ,
+	{ 
+		"id":"2",
+		"Cliente__c" :"a00K0000000igJO",
+		"Cantidad__c" : 3333,
+		"Precio__c" : 5450,
+		"Descuento__c" : 4,
+		"Impuesto__c" : 0,
+		"Subtotal__c" : 239800,
+		"Referencia__c" : 12453,
+		"Observacion__c" :"" 
+	} ]
+}

@@ -1,0 +1,21 @@
+%html
+  %head
+    %title
+      Force.com Demo App
+    %link{:rel => 'stylesheet', :href => '/stylesheets/index.css'}
+  %body
+
+    #content
+      .top_links
+        %a{:href => "/"} Home
+        |
+        %a{:href => "/chatter/users"} Users
+        |
+        %a{:href => "/chatter/groups"} Groups
+        - if session[:client]
+          |
+          %a{:href => "/logout"} Logout
+      .flash_message
+        = flash[:notice] if flash[:notice]
+
+      = yield
