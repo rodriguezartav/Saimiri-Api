@@ -36,7 +36,7 @@ post "/contact" do
                 :domain => "coalicionsur.org"
                }
              )
-
+    "ok"
 end
 
 post "/donacion" do  
@@ -54,7 +54,6 @@ post "/donacion" do
                 :domain => "coalicionsur.org"
                }
              )
-
-             
+      "ok"
 end
 

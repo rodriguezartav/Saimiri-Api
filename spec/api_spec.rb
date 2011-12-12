@@ -5,7 +5,7 @@ set :enviroment , :test
  
 def app           
   Sinatra::Application
-end 
+end  
   
 describe "API Service" do 
   include Rack::Test::Methods
