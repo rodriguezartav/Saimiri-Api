@@ -2,7 +2,7 @@ require "rubygems"
 require 'sinatra'
 require 'rack/cors'
 require 'databasedotcom'
-require  "./pony_gmail.rb"
+require 'pony'
 
 use Rack::Cors do
   allow do
