@@ -18,6 +18,7 @@ get "allow_access" do
 end
 
 post "/contact" do
+  begin
   response['Access-Control-Allow-Origin'] = '*'
   Pony.mail(:to=>"dsolano@fundacionsaimiri.org",
               :from => params[:email],
@@ -32,10 +33,17 @@ post "/contact" do
                 :domain => "coalicionsur.org"
                }
              )
+    rescue => msg
+      puts msg
+      
+      return "Error" + msg
+    end
       redirect to(:return)
 end
 
 post "/donacion" do
+  begin
+  
   response['Access-Control-Allow-Origin'] = '*'
   Pony.mail(:to=>"donations@fundacionsaimiri.org",
               :from => params[:email],
@@ -50,6 +58,11 @@ post "/donacion" do
                 :domain => "coalicionsur.org"
                }
              )
+     rescue => msg
+       puts msg
+        return "Error" + msg
+      end
+             
     redirect to(:return)
 end
 

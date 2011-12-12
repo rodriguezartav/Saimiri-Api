@@ -6,7 +6,7 @@ set :enviroment , :test
 def app           
   Sinatra::Application
 end 
- 
+  
 describe "API Service" do 
   include Rack::Test::Methods
  
@@ -15,14 +15,14 @@ describe "API Service" do
      post '/contact', json
      body = last_response.body    
      puts "Result " + body      
-     last_response.status.should == 200
+     last_response.status.should == 302
   end
   
   it "should send an email from donation invoice request" do
      json = { :email => "salesforce@rodcocr.com" }
      post '/donacion', json
      body = last_response.body   
-     last_response.status.should == 200
+     last_response.status.should == 302
       
   end
     
