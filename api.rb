@@ -9,7 +9,6 @@ use Rack::Cors do
     origins '*'
     resource '/contact', :headers => :any, :methods => :get
     resource '/donacion', :headers => :any, :methods => :get
-
   end
 end
 
@@ -21,39 +20,5 @@ get "/" do
   "ok"
 end
 
-post "/contact" do
-  response['Access-Control-Allow-Origin'] = '*'
-  Pony.mail(:to=>"dsolano@fundacionsaimiri.org",
-              :from => params[:email],
-              :subject=> "Email de "+ params[:name],
-              :body => params[:message],
-              :via => :smtp, :via_options => {
-                :address => 'smtp.gmail.com',
-                :port => '587',
-                :user_name => 'roberto@coalicionsur.org',
-                :password => 'monomono',
-                :authentication => :plain,
-                :domain => "coalicionsur.org"
-               }
-             )
-    "ok"
-end
 
-post "/donacion" do  
-  response['Access-Control-Allow-Origin'] = '*'
-  Pony.mail(:to=>"donations@fundacionsaimiri.org",
-              :from => params[:email],
-              :subject=> "Donacion!!!",
-              :body => params[:email],
-              :via => :smtp, :via_options => {
-                :address => 'smtp.gmail.com',
-                :port => '587',
-                :user_name => 'roberto@coalicionsur.org',
-                :password => 'monomono',
-                :authentication => :plain,
-                :domain => "coalicionsur.org"
-               }
-             )
-      "ok"
-end
 
