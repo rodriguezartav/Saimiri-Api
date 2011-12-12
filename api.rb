@@ -42,7 +42,7 @@ post "/contact" do
       
       return "Error" + msg
     end
-      redirect to(:return)
+      redirect to(params[:return])
 end
 
 post "/donacion" do
@@ -67,6 +67,6 @@ post "/donacion" do
         return "Error" + msg
       end
              
-    redirect to(:return)
+      redirect to(params[:return])
 end
 
